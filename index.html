@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&display=swap"
+         rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta charset="UTF-8">
+        <title>قائمة مكان</title>
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    <body>
+
+        <!--هيدر-->
+        <header class="header">
+            <img src="logo.jpg" class="logo">
+            <h1>قائمة مكان</h1>
+        </header>
+
+        <div class="pageCont">
+        <!--الأقسام-->
+        <section class="categories">
+            <button class="cat seasonal" onclick="filterItems('seasonal')">مشروبات موسمية</button>
+            <button class="cat hot" onclick="filterItems('hot')">المشروبات الساخنة</button>
+            <button class="cat cold" onclick="filterItems('cold')">المشروبات الباردة</button>
+            <button class="cat waffle" onclick="filterItems('waffle')">الكروافل</button>
+            <button class="cat carnuts" onclick="filterItems('carnuts')">المكسرات المكرملة</button>
+            <button class="cat pastry" onclick="filterItems('pastry')">المعجنات</button>
+            <button class="cat sweets" onclick="filterItems('sweets')">الكيك والحلا</button>
+            <button class="cat boxes" onclick="filterItems('boxes')">الجمعات</button>
+        </section>
+
+        <!--المنتجات-->
+        <section class="items">
+
+            <div class="item" 
+            data-category="seasonal"
+            data-title="شوكوميلو"
+            data-desc=" دارك هوت شوكلت غني، يعلوه قطعة من المارشملو المنزلي مع رشة كاكاو."
+            data-price="??&#xFDFC;"
+            data-img="chocomellow.jpg"
+            onclick="openModal(this)">
+
+            <img src="chocomellow.jpg">
+            <div>
+                <h3>شوكوميلو</h3>
+                <p>??&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="seasonal"
+            data-title="سحلب"
+            data-desc="  مشروب شتوي غني بالمكسرات والقرفة بحلاوة موزونة."
+            data-price="??&#xFDFC;"
+            data-img="sahlb.jpg"
+            onclick="openModal(this)">
+
+            <img src="sahlb.jpg">
+            <div>
+                <h3>سحلب</h3>
+                <p>??&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="seasonal"
+            data-title="ماتشاميلو"
+            data-desc=" مشروب ماتشا ساخن، يعلوه قطعة من المارشميلو المنزلي."
+            data-price="??&#xFDFC;"
+            data-img="matchamellow.jpg"
+            onclick="openModal(this)">
+
+            <img src="matchamellow.jpg">
+            <div>
+                <h3>ماتشاميلو</h3>
+                <p>??&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="seasonal"
+            data-title="محلبية"
+            data-desc="محلبية (كاسترد) بقوام كريمي وخفيف، منكهة بالزعفران والهيل بحلاوة موزونة."
+            data-price="??&#xFDFC;"
+            data-img="custred.jpg"
+            onclick="openModal(this)">
+
+            <img src="custred.jpg">
+            <div>
+                <h3>محلبية</h3>
+                <p>??&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="seasonal"
+            data-title="هوت شوكلت"
+            data-desc=" هوت تشوكلت غني بالتشوكلت البلجيكي الخام مع رشة قرفة."
+            data-price="16&#xFDFC;"
+            data-img="hotchocolate.jpg"
+            onclick="openModal(this)">
+
+            <img src="hotchocolate.jpg">
+            <div>
+                <h3>هوت شوكلت</h3>
+                <p>16&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="hot"
+            data-title="إسبريسو"
+            data-desc="قهوة قوية سادة بطعم مركز."
+            data-price="10&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>إسبريسو</h3>
+                <p>10&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="hot"
+            data-title="أمريكانو"
+            data-desc=" قهوة إسبريسو مخففة بالماء الساخن"
+            data-price="12&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>أمريكانو</h3>
+                <p>12&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="hot"
+            data-title="كورتادو"
+            data-desc="إسبريسو مع كمية صغيرة من الحليب المبخر."
+            data-price="14&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>كورتادو</h3>
+                <p>14&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="hot"
+            data-title="فلات وايت"
+            data-desc=" إسبريسو مع طبقة من الحليب الرغوي الناعم."
+            data-price="15&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>فلات وايت</h3>
+                <p>15&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="hot"
+            data-title="لاتيه"
+            data-desc="إسبريسو مع حليب مبخر بكثافة."
+            data-price="16&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>لاتيه</h3>
+                <p>16&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="hot"
+            data-title="كابتشينو"
+            data-desc=" إسبريسو مع رغوة حليب كثيفة ومتوازنة."
+            data-price="15&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>كابتشينو</h3>
+                <p>15&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="hot"
+            data-title="قهوة مقطرة"
+            data-desc=" قهوة مطحونة بطعم مركز."
+            data-price="15&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>قهوة مقطرة</h3>
+                <p>19-23&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="hot"
+            data-title="ماتشا لاتيه"
+            data-desc="  شاي الماتشا الأخضر مع حليب ساخن."
+            data-price="20&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>ماتشا لاتيه</h3>
+                <p>20&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="hot"
+            data-title="روزي ماتشا"
+            data-desc=" شاي الماتشا الأخضر بنكهة زهرية طبيعية."
+            data-price="22&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>روزي ماتشا</h3>
+                <p>22&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="cold"
+            data-title="أمريكانو"
+            data-desc=" قهوة إسبريسو مخففة بالماء البارد."
+            data-price="12&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>أمريكانو</h3>
+                <p>12&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="cold"
+            data-title="كورتادو"
+            data-desc=" إسبريسو مع كمية صغيرة من الحليب المبرد"
+            data-price="14&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>كورتادو</h3>
+                <p>14&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="cold"
+            data-title="فلات وايت"
+            data-desc="  إسبريسو مع طبقة من الحليب الرغوي الناعم."
+            data-price="15&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>فلات وايت</h3>
+                <p>15&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="cold"
+            data-title="لاتيه"
+            data-desc=" إسبريسو مع حليب بارد وكريمي."
+            data-price="16&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>لاتيه</h3>
+                <p>16&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="cold"
+            data-title="قهوة مقطرة"
+            data-desc=" قهوة مطحونة بطعم مركز."
+            data-price="20-24&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>قهوة مقطرة</h3>
+                <p>20-24&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="cold"
+            data-title="ماتشا لاتيه"
+            data-desc=" شاي الماتشا الأخضر مع حليب بارد."
+            data-price="20&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>ماتشا لاتيه</h3>
+                <p>20&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="cold"
+            data-title="روزي ماتشا"
+            data-desc=" شاي الماتشا الأخضر بنكهة زهرية طبيعية."
+            data-price="22&#xFDFC;"
+            data-img="rosematcha.jpg"
+            onclick="openModal(this)">
+
+            <img src="rosematcha.jpg">
+            <div>
+                <h3>روزي ماتشا</h3>
+                <p>22&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="cold"
+            data-title="آيس تي ليمون بلدي"
+            data-desc="شاي مثلج منعش مع عصير الليمون البلدي الطازج."
+            data-price="18&#xFDFC;"
+            data-img="icetea.jpg"
+            onclick="openModal(this)">
+
+            <img src="icetea.jpg">
+            <div>
+                <h3>آيس تي ليمون بلدي</h3>
+                <p>18&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="cold"
+            data-title="كركديه"
+            data-desc=" مشروب زهري طبيعي مثلج."
+            data-price="22&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>كركديه</h3>
+                <p>22&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="waffle"
+            data-title="كروافل السكر المكرمل"
+            data-desc=" كروافل (وافل) مكان يجمع هشاشة وطراوة الكرواسون مع قرمشة السكر المكرمل."
+            data-price="14&#xFDFC;"
+            data-img="sugarwaffle.jpg"
+            onclick="openModal(this)">
+
+            <img src="sugarwaffle.jpg">
+            <div>
+                <h3>كروافل السكر المكرمل</h3>
+                <p>14&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="waffle"
+            data-title="كروافل الزعتر بالسكر"
+            data-desc=" كروافل (وافل) مكان يجمع هشاشة وطراوة الكرواسون مغطى بالزعتر والسكر."
+            data-price="16&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>كروافل الزعتر بالسكر</h3>
+                <p>16&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="waffle"
+            data-title="كروافل القرفة بالسكر"
+            data-desc=" كروافل (وافل) مكان يجمع هشاشة وطراوة الكرواسون مغطى بالقرفة والسكر."
+            data-price="15&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>كروافل القرفة بالسكر</h3>
+                <p>15&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="pastry"
+            data-title="كرواسون جبن الفيتا"
+            data-desc=" كرواسون هش محشو بجبنة الفيتا."
+            data-price="14&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>كرواسون جبن الفيتا</h3>
+                <p>14&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="pastry"
+            data-title="كرواسون الزعتر"
+            data-desc=" كرواسون هش محشو بالزعتر."
+            data-price="13&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>كرواسون الزعتر</h3>
+                <p>13&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="carnuts"
+            data-title="أقراص السمسم المكرمل"
+            data-desc=" أقراص مقرمشة بسمسم محمص مع الكراميل."
+            data-price="9&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>أقراص السمسم المكرمل</h3>
+                <p>9&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="carnuts"
+            data-title="أقراص الزعتر المكرمل"
+            data-desc=" أقراص هشة بنكهة الزعتر مع الكراميل."
+            data-price="9&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>أقراص الزعتر المكرمل</h3>
+                <p>9&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="carnuts"
+            data-title="أقراص اللوز المكرمل"
+            data-desc=" أقراص اللوز المحمص مع الكراميل."
+            data-price="10&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>أقراص اللوز المكرمل</h3>
+                <p>10&#xFDFC;</p>
+            </div>
+            </div>
+            
+            <div class="item" 
+            data-category="carnuts"
+            data-title="أقراص الفستق المكرمل"
+            data-desc=" أقراص الفستق المحمص مع الكراميل."
+            data-price="10&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>أقراص الفستق المكرمل</h3>
+                <p>10&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="carnuts"
+            data-title="بار الشوكولاتة باللوز"
+            data-desc=" شوكولاتة مع قطع اللوز المحمص."
+            data-price="12&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>بار الشوكولاتة باللوز</h3>
+                <p>12&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="carnuts"
+            data-title="قرانولا بيكان"
+            data-desc="  لوح قرانولا مقرمش مع البيكان المحمص."
+            data-price="12&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>قرانولا بيكان</h3>
+                <p>12&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="carnuts"
+            data-title="قرانولا فستق"
+            data-desc="  لوح قرانولا مقرمش مع الفستق."
+            data-price="12&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>قرانولا فستق</h3>
+                <p>12&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="sweets"
+            data-title="كيكة الشوكولاتة"
+            data-desc="كيكة شوكولاتة غنية وطرية."
+            data-price="24&#xFDFC;"
+            data-img="chocolatecake.jpg"
+            onclick="openModal(this)">
+
+            <img src="chocolatecake.jpg">
+            <div>
+                <h3>كيكة الشوكولاتة</h3>
+                <p>24&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="sweets"
+            data-title="كيكة الجزر"
+            data-desc=" كيكة بنكهة الجزر والتوابل الدافئة مغطاة بالكريمة."
+            data-price="23&#xFDFC;"
+            data-img="carrotcake.jpg"
+            onclick="openModal(this)">
+
+            <img src="carrotcake.jpg">
+            <div>
+                <h3>كيكة الجزر</h3>
+                <p>23&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="sweets"
+            data-title="كيكة العسل"
+            data-desc=" كيكة خفيفة محلاة بالعسل."
+            data-price="21&#xFDFC;"
+            data-img="honeycake.jpg"
+            onclick="openModal(this)">
+
+            <img src="honeycake.jpg">
+            <div>
+                <h3>كيكة العسل</h3>
+                <p>21&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="sweets"
+            data-title="كيكة السنوبيري"
+            data-desc=" كيكة جوز الهند المحشوة بالتوت."
+            data-price="23&#xFDFC;"
+            data-img="snowberry.jpg"
+            onclick="openModal(this)">
+
+            <img src="snowberry.jpg">
+            <div>
+                <h3>كيكة السنوبيري</h3>
+                <p>23&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="sweets"
+            data-title="كيكة الزعفران"
+            data-desc=" كيكة بنكهة الزعفران مع الكريمة."
+            data-price="؟؟&#xFDFC;"
+            data-img="saffroncake.jpg"
+            onclick="openModal(this)">
+
+            <img src="saffroncake.jpg">
+            <div>
+                <h3>كيكة الزعفران</h3>
+                <p>؟؟&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="sweets"
+            data-title="تشيز كيك التمر"
+            data-desc=" تشيز كيك كريمي مع التمر الطبيعي."
+            data-price="13&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>تشيز كيك التمر</h3>
+                <p>13&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="sweets"
+            data-title="تشيز كيك مدريد"
+            data-desc=" تشيز كيك كريمي بنكهة الفانيلا مع طبقة من السكر المكرمل."
+            data-price="؟؟&#xFDFC;"
+            data-img="cheesemadr.jpg"
+            onclick="openModal(this)">
+
+            <img src="cheesemadr.jpg">
+            <div>
+                <h3>تشيز كيك مدريد</h3>
+                <p>؟؟&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="sweets"
+            data-title="تارت البيكان"
+            data-desc=" تارت مقرمش محشو بالبيكان المكرمل."
+            data-price="18&#xFDFC;"
+            data-img="piccantart.jpg"
+            onclick="openModal(this)">
+
+            <img src="piccantart.jpg">
+            <div>
+                <h3>تارت البيكان</h3>
+                <p>18&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="sweets"
+            data-title="براوني"
+            data-desc=" براوني شوكولاتة."
+            data-price="13&#xFDFC;"
+            data-img="logo.jpg"
+            onclick="openModal(this)">
+
+            <img src="logo.jpg">
+            <div>
+                <h3>براوني</h3>
+                <p>13&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="boxes"
+            data-title="دلة قهوة"
+            data-desc=" قهوة اليوم-راوندا بحجم 1.5 لتر (يُفضل الطلب المسبق)."
+            data-price="64&#xFDFC;"
+            data-img="dallah.jpg"
+            onclick="openModal(this)">
+
+            <img src="dallah.jpg">
+            <div>
+                <h3>دلة قهوة</h3>
+                <p>64&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="boxes"
+            data-title="دلة كركديه"
+            data-desc=" كركديه بحجم 1.5 لتر (يُفضل الطلب المسبق)."
+            data-price="67&#xFDFC;"
+            data-img="dallah.jpg"
+            onclick="openModal(this)">
+
+            <img src="dallah.jpg">
+            <div>
+                <h3>دلة كركديه</h3>
+                <p>67&#xFDFC;</p>
+            </div>
+            </div>
+
+            <div class="item" 
+            data-category="boxes"
+            data-title="بوكس كروافل"
+            data-desc=" بوكس كروافل 12 قطعة متوفر بثلاث نكهات (السكر المكرمل، السكر بالزعتر، السكر بالقرفة) أو بوكس منوع (يُفضل الطلب المسبق)."
+            data-price="74&#xFDFC;"
+            data-img="wafflebox.jpg"
+            onclick="openModal(this)">
+
+            <img src="wafflebox.jpg">
+            <div>
+                <h3>بوكس كروافل</h3>
+                <p>74&#xFDFC;</p>
+            </div>
+            </div>
+
+        </section>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img id="modal-img">
+                <h2 id="modal-title"></h2>
+                <p id="modal-desc"></p>
+                <p id="modal-price"></p>
+            </div>
+        </div>
+        </div>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
